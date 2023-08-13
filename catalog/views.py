@@ -8,6 +8,7 @@ def home_page_controller(request):
 def contacts_controller(request):
     if request.method == "POST":
         name = request.POST.get('name')
-        email = request.POST.get('email')
-        print(name, email)
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        print(f'{name} ({phone}): {message}')
     return render(request, 'catalog/contacts.html')
