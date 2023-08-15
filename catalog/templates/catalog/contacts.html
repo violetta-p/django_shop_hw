@@ -81,10 +81,7 @@
         .scroll {
         height: auto;
         overflow-y: scroll;
-        }
-        .my_size{
-        height:40px;
-        width:300px;
+
         }
 
     </style>
@@ -105,7 +102,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="home_page.html" class="nav-link text-white" aria-current="page">
+                <a href="/" class="nav-link text-white" aria-current="page">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#home"/>
                     </svg>
@@ -114,7 +111,7 @@
             </li>
 
             <li>
-                <a href="contacts.html" class="nav-link active">
+                <a href="/contacts/" class="nav-link active">
                     <svg class="bi me-2" width="16" height="16">
                         <use xlink:href="#contacts"/>
                     </svg>
@@ -130,13 +127,13 @@
     <div class="scroll">
         <div class="container">
             <header>
-            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <div class="pricing-header p-3 pb-lg-4 mx-auto text-center">
                 <h1 class="display-4 fw-normal text-body-emphasis">Skystore</h1>
                 <p class="fs-5 text-body-secondary">Наши контакты</p>
             </div>
             </header>
             <main class="row">
-                <div class="col-6 text-centre">
+                <div class="col-lg-6 text-centre">
                     <div class="card mb-4 box-shadow">
                         <div class="card-body">
                             <table class="table table-striped">
@@ -156,10 +153,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                     <div class="card mb-4 box-shadow">
                         <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Свяжитесь с нами</h4>
+                            <h4 class="my-0 fw-normal">Свяжитесь с нами</h4>
                         </div>
                         <div class="card-body">
                             <form method="post" action="" class="form-floating">
@@ -177,7 +174,7 @@
                                     <textarea type="text" name="message" class="form-control" id="message" placeholder="Контактный телефон" required></textarea>
                                 </div>
                             </form>
-                            <button type="submit" class="btn btn-lg btn-block btn-outline-primary">Отправить</button>
+                            <button type="submit" class="btn btn-lg btn-block btn-success">Отправить</button>
                         </div>
                     </div>
                 </div>
