@@ -7,7 +7,7 @@ NULLABLE = {'blank': True, 'null': True}
 class Product(models.Model):
     product_name = models.CharField(max_length=50, verbose_name='наименование')
     description = models.TextField(verbose_name='описание', **NULLABLE)
-    preview_pic = models.ImageField(upload_to='project_pictures/', verbose_name='изображение', **NULLABLE)
+    preview_pic = models.ImageField(upload_to='project_pictures/', **NULLABLE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     price = models.IntegerField(verbose_name='цена за покупку')
     creation_date = models.DateTimeField(auto_now_add=True)
@@ -15,12 +15,8 @@ class Product(models.Model):
 
     def __str__(self):
         # Строковое отображение объекта
-        return f'Категория: {self.category} ' \
-               f'Наименование: {self.product_name} ' \
+        return f'{self.product_name}\n{self.price}\n' \
                f'Описание: {self.description}' \
-               f'Цена: {self.price}' \
-               f'Дата создания: {self.creation_date} ' \
-               f'Дата изменения: {self.modified_date}'
 
     class Meta:
         verbose_name = 'продукт'

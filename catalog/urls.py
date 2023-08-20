@@ -1,9 +1,10 @@
 from django.urls import path
-#from catalog.views import home_page_controller, contacts_controller
-from catalog import views
-import os
+from catalog.apps import CatalogConfig
+from catalog.views import home_page, contacts
+
+app_name = CatalogConfig.name
 
 urlpatterns = [
-    path('', views.home_page_controller, name="home_page_controller"),
-    path('contacts/', views.contacts_controller, name="contacts_controller"),
+    path('', home_page, name="home_page"),
+    path('contacts/', contacts, name="contacts"),
 ]
