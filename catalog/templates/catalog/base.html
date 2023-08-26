@@ -1,6 +1,4 @@
 {% load static %}
-
-
 <!doctype html>
 <html lang="ru">
   <head>
@@ -8,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
     <title>{{ title }}</title>
 
@@ -23,28 +20,7 @@
 
   <body>
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">Skystore</h4>
-              <p class="text-muted"></p>
-            </div>
-            {% include 'catalog/includes/inc_base_menu.html' %}
-
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">More</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+  {% include 'catalog/includes/inc_base_menu.html' %}
 
     <main role="main">
       <section class="jumbotron text-center">
@@ -66,7 +42,7 @@
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
-          <a href="#">Back to top</a>
+          <a href="/">Back to top</a>
         </p>
         <p>&copy; {% now 'Y'%}</p>
       </div>

@@ -1,18 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy, reverse
+from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 from catalog.models import Product, Category
 
-# def home_page_controller(request):
-#     return render(request, 'catalog/home_page.html')
+class ProductListView(ListView):
+    model = Product
 
-def home_page(request):
-    products_all = Product.objects.all()
-    category_all = Category.objects.all()
-    content = {
-        'objects_list': products_all,
-        'category_list': category_all,
-        'title': 'Skystore',
-    }
-    return render(request, 'catalog/home_page.html', content)
+class ProductDetailView(DetailView):
+    model = Product
 
 def contacts(request):
     if request.method == "POST":
@@ -26,3 +21,17 @@ def contacts(request):
     }
     return render(request, 'catalog/contacts.html', content)
 
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ('product_name', 'description', 'category', 'price', 'preview_pic')
+    success_url = reverse_lazy('catalog:product_list')
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    fields = ('product_name', 'description', 'price', 'preview_pic')
+    success_url = reverse_lazy('catalog:product_list')
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:product_list')
