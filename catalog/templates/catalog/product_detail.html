@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% load my_tags %}
+{% block page_content %}
+<div class="col-6">
+    <div class="card mb-4 box-shadow">
+        <div class="card-body">
+            <h5 class="card-title">{{object.product_name}}</h5>
+            <p class="card-text">Price: {{object.price}} rub</p>
+            <p class="card-text">Category: {{object.category }}</p>
+            <p class="card-text">Description: {{object.description | slice:100 }}</p>
+            <p class="card-text">Last change: {{object.modified_date }}</p>
+        <a href="/" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</div>
+<div class="col-6">
+    <img src="{% mediapath object.preview_pic %}" class="card-img-top" alt="{{ object.product_name }}">
+</div>
+
+
+
+{% endblock %}
