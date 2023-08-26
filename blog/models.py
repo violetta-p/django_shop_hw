@@ -1,0 +1,25 @@
+from django.db import models
+from django.urls import reverse
+
+NULLABLE = {'blank': True, 'null': True}
+
+
+class Blog(models.Model):
+    """Запись в блоге"""
+    title = models.CharField(max_length=100, verbose_name='Заголовок')
+    slug = models.CharField(max_length=100, verbose_name='slug', **NULLABLE)
+    body = models.TextField(verbose_name='Содержимое')
+    preview_pic = models.ImageField(upload_to='blog_pictures/', **NULLABLE, verbose_name='Изображение')
+    creation_date = models.DateField(auto_now_add=True, verbose_name='Дата создания')
+    is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
+    views_count = models.PositiveIntegerField(default=0, verbose_name='Просмотры')
+
+    def __str__(self):
+        return f'{self.title}'
+
+    def get_url(self):
+        return reverse("s:view", kwargs={"slug": self.slug})
+
+    class Meta:
+        verbose_name = 'статья'
+        verbose_name_plural = 'статьи'
