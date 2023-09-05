@@ -12,6 +12,9 @@
             <div class="col-6">
                 <form method="post" enctype="multipart/form-data">
                     <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Create/update</h4>
+                        </div>
                         <div class="card-body">
                             {% csrf_token %}
                             {{ form.as_p }}
@@ -29,15 +32,17 @@
             </div>
             <div class="col-6">
                 <form method="post" enctype="multipart/form-data">
-                    <div class = "card">
+                    <div class = "card mb-4 box-shadow">
                         <div class="card-header">
                             <h4 class="my-0 font-weight-normal">Product versions</h4>
                         </div>
                         <div class="card-body">
+                            {% csrf_token %}
                             {{ formset.management_form }}
                             {% for form in formset.forms %}
                                 {{ form.as_p}}
                             {% endfor %}
+                            <button type="submit" class="btn btn-success">Create</button>
                         </div>
                     </div>
                 </form>
