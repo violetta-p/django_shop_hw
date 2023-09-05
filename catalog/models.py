@@ -14,23 +14,37 @@ class Product(models.Model):
     modified_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        # Строковое отображение объекта
         return f'{self.product_name} {self.price}' \
-               f'Описание: {self.description}' \
+               f'Description: {self.description}' \
+
 
     class Meta:
-        verbose_name = 'продукт'
-        verbose_name_plural = 'продукты'
+        verbose_name = 'product'
+        verbose_name_plural = 'products'
         ordering = ('modified_date',)
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50, db_index=True, verbose_name='наименование')
-    description = models.TextField(verbose_name='описание', **NULLABLE)
+    name = models.CharField(max_length=50, db_index=True, verbose_name='category name')
+    description = models.TextField(verbose_name='category description', **NULLABLE)
 
     def __str__(self):
         return f'{self.name}'
 
     class Meta:
-        verbose_name = 'категория' # Настройка для наименования одного объекта
-        verbose_name_plural = 'категории'
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
+
+
+class Version(models.Model):
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='product')
+    version_number = models.PositiveSmallIntegerField(verbose_name='version number')
+    version_name = models.CharField(max_length=100, verbose_name='version name')
+    is_active = models.BooleanField(verbose_name='flag of the current version')
+
+    def __str__(self):
+        return f'{self.version_number}: {self.version_name}'
+
+    class Meta:
+        verbose_name = 'version'
+        verbose_name_plural = 'versions'

@@ -9,7 +9,15 @@
             <p class="card-text">Category: {{object.category }}</p>
             <p class="card-text">Description: {{object.description | slice:100 }}</p>
             <p class="card-text">Last change: {{object.modified_date }}</p>
-        <a href="/" class="btn btn-primary">Back</a>
+
+            <div class="btn-group">
+                <a class="btn btn-sm btn-primary"
+               href="{% url 'catalog:product_list'%}" role="button">Back</a>
+                <a class="btn btn-sm btn-primary"
+               href="{% url 'catalog:product_edit' object.pk %}" role="button">Edit</a>
+                <a class="btn btn-sm btn-danger"
+               href="{% url 'catalog:product_delete' object.pk %}" role="button">Delete</a>
+            </div>
         </div>
     </div>
 </div>

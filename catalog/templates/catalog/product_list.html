@@ -9,7 +9,7 @@
 {% for object in object_list%}
 <div class="col-md-4">
     <div class="card mb-4 box-shadow">
-        <img src="{% mediapath object.preview_pic %}" width="auto" alt="{{ object.product_name }}">
+        <img src="{% mediapath object.preview_pic %}" width="auto" height="200" alt="{{ object.product_name }}">
         <div class="card-body">
             <ul class="list-unstyled mt-3 mb-4">
                 <li>{{object.product_name}}</li>
@@ -31,4 +31,14 @@
 </div>
 
 {% endfor %}
+</div>
+    <div id="pages" align="center">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page.obj.previous_page_number }}"><- Previous </a>
+        {% endif %}
+            <span class="current">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next -> </a>
+        {% endif %}
+    </div>
 {% endblock %}

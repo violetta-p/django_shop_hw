@@ -10,22 +10,37 @@
     <div class="col-12">
         <div class="row text-start">
             <div class="col-6">
-                <div class="card mb-4 box-shadow">
-                    <div class="card-body">
-                        <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <a href="{% url 'catalog:product_detail' object.pk%}" type="submit" class="btn btn-outline-success">
+                            <a href="{% url 'catalog:product_detail' object.pk%}" type="submit" class="btn btn-success">
                                 {% if object %}
                                     Save
                                 {% else %}
                                     Create
                                 {% endif %}
                             </a>
-                            <a href="{% url 'catalog:product_detail' object.pk%}" class="btn btn-outline-warning">Cancel</a>
-                        </form>
+                            <a href="{% url 'catalog:product_detail' object.pk%}" class="btn btn-warning">Cancel</a>
+                        </div>
                     </div>
-                </div>
+                </form>
+            </div>
+            <div class="col-6">
+                <form method="post" enctype="multipart/form-data">
+                    <div class = "card">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Product versions</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ formset.management_form }}
+                            {% for form in formset.forms %}
+                                {{ form.as_p}}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
