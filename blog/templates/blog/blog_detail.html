@@ -22,12 +22,14 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
+                        <a href="{% url 'blog:list'%}"
+                           class="btn btn-sm btn-outline-secondary">Back</a>
                         <a href="{% url 'blog:edit' object.pk %}"
                            class="btn btn-sm btn-outline-secondary">Update</a>
                         <a href="{% url 'blog:delete' object.pk %}"
                            class="btn btn-sm btn-outline-secondary">Delete</a>
                     </div>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>

@@ -15,14 +15,13 @@
                         <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <a href="{% url 'blog:view' object.pk %}" type="submit" class="btn btn-outline-success">
-                                {% if object %}
-                                    Save
-                                {% else %}
-                                    Create
-                                {% endif %}
-                            </a>
-                            <a href="{% url 'blog:view' object.pk %}" class="btn btn-outline-warning">Cancel</a>
+                            {% if object %}
+                                <a href="{% url 'blog:view' object.pk %}" type="submit" class="btn btn-success">Save</a>
+                                <a href="{% url 'blog:view' object.pk %}" class="btn btn-warning">Cancel</a>
+                            {% else %}
+                                <button type="submit" class="btn btn-success">Create</button>
+                                <a href="{% url 'blog:list'%}" class="btn btn-warning">Cancel</a>
+                            {% endif %}
                         </form>
                     </div>
                 </div>
