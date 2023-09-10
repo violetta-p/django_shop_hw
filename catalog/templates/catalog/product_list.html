@@ -2,9 +2,11 @@
 {% load my_tags %}
 {%block page_content%}
 
+{% if user.is_authenticated %}
 <div class="col-12 mb-5">
     <a class="btn btn-outline-primary" href="{% url 'catalog:product_create' %}">Add item</a>
 </div>
+{% endif %}
 
 {% for object in object_list%}
 <div class="col-md-4">
@@ -15,15 +17,18 @@
                 <li>{{object.product_name}}</li>
                 <li>{{object.price}} rub</li>
                 <li class="text-muted">Description: {{object.description | slice:100 }}</li>
+                <li class="text-muted">Created by: {{object.creator|default:"No info" }}</li>
             </ul>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                     <a class="btn btn-sm btn-outline-secondary"
                        href="{% url 'catalog:product_detail' object.pk %}" role="button">View</a>
+                    {% if user.is_authenticated %}
                     <a class="btn btn-sm btn-outline-secondary"
                       href="{% url 'catalog:product_edit' object.pk %}" role="button">Edit</a>
                     <a class="btn btn-sm btn-outline-secondary"
                        href="{% url 'catalog:product_delete' object.pk %}" role="button">Delete</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

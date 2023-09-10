@@ -1,54 +1,54 @@
 {% extends 'blog/base.html' %}
 
 {% block page_content %}
-
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Create\Update an item</h1>
-</div>
-
-<div class="container">
-    <div class="col-12">
-        <div class="row text-start">
-            <div class="col-6">
-                <form method="post" enctype="multipart/form-data">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Create/update</h4>
-                        </div>
-                        <div class="card-body">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <a href="{% url 'catalog:product_detail' object.pk%}" type="submit" class="btn btn-success">
-                                {% if object %}
-                                    Save
-                                {% else %}
-                                    Create
-                                {% endif %}
-                            </a>
-                            <a href="{% url 'catalog:product_detail' object.pk%}" class="btn btn-warning">Cancel</a>
-                        </div>
+    <div class="col-6">
+        <form method="post" enctype="multipart/form-data">
+            <div class="card mb-4 no-hover">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        {% if object %}
+                            Edit
+                        {% else %}
+                            Create
+                        {% endif %}
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="mt-4">
+                        {% if product %}
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <a href="{% url 'catalog:product_delete' product.pk %}" class="btn btn-danger ml-2">Delete</a>
+                        {% else %}
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        {% endif %}
+                        <a href="{% url 'catalog:product_list'%}" class="btn btn-warning ml-2">Cancel</a>
                     </div>
-                </form>
-            </div>
-            <div class="col-6">
-                <form method="post" enctype="multipart/form-data">
-                    <div class = "card mb-4 box-shadow">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Product versions</h4>
-                        </div>
+                </div>
+                <div class="">
+                    <div class="card-header">
+                        {% if product %}
+                            <h2 class="h4">Edit Product Version</h2>
+                        {% else %}
+                            <h2 class="h4">Add Product Version</h2>
+                        {% endif %}
+                    </div>
+                    <div class="card no-hover">
                         <div class="card-body">
-                            {% csrf_token %}
                             {{ formset.management_form }}
                             {% for form in formset.forms %}
-                                {{ form.as_p}}
+                                {{ form.as_p }}
+                                {% if not forloop.last %}
+                                    <hr>
+                                    <hr>
+                                {% endif %}
                             {% endfor %}
-                            <button type="submit" class="btn btn-success">Create</button>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
-</div>
 
 {% endblock %}
