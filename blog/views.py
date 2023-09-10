@@ -10,6 +10,9 @@ class BlogCreateView(CreateView):
     success_url = reverse_lazy('blog:list')
 
     def form_valid(self, form):
+        self.object = form.save()
+        self.object.creator = self.request.user
+        self.object.save()
         if form.is_valid():
             new_article = form.save()
             new_article.slug = slugify(new_article.title)
