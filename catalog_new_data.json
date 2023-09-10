@@ -1,0 +1,924 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "product_name": "Chang",
+      "description": "24 - 12 oz bottles",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1900,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "product_name": "Aniseed Syrup",
+      "description": "12 - 550 ml bottles",
+      "preview_pic": "",
+      "category": 2,
+      "price": 1000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "product_name": "Chef Anton Cajun Seasoning",
+      "description": "48 - 6 oz jars",
+      "preview_pic": "",
+      "category": 2,
+      "price": 2200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "product_name": "Grandma Boysenberry Spread",
+      "description": "12 - 8 oz jars",
+      "preview_pic": "",
+      "category": 2,
+      "price": 2500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "product_name": "Northwoods Cranberry Sauce",
+      "description": "12 - 12 oz jars",
+      "preview_pic": "",
+      "category": 2,
+      "price": 4000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "product_name": "Mishi Kobe Niku",
+      "description": "18 - 500 g pkgs.",
+      "preview_pic": "",
+      "category": 6,
+      "price": 9700,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "product_name": "Ikura",
+      "description": "12 - 200 ml jars",
+      "preview_pic": "",
+      "category": 8,
+      "price": 3100,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+      "product_name": "Queso Cabrales",
+      "description": "1 kg pkg.",
+      "preview_pic": "",
+      "category": 4,
+      "price": 2100,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+      "product_name": "Queso Manchego La Pastora",
+      "description": "10 - 500 g pkgs.",
+      "preview_pic": "",
+      "category": 4,
+      "price": 3800,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 11,
+    "fields": {
+      "product_name": "Konbu",
+      "description": "2 kg box",
+      "preview_pic": "",
+      "category": 8,
+      "price": 600,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+      "product_name": "Tofu",
+      "description": "40 - 100 g pkgs.",
+      "preview_pic": "",
+      "category": 7,
+      "price": 2300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 13,
+    "fields": {
+      "product_name": "Genen Shouyu",
+      "description": "24 - 250 ml bottles",
+      "preview_pic": "",
+      "category": 2,
+      "price": 1300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 14,
+    "fields": {
+      "product_name": "Pavlova",
+      "description": "32 - 500 g boxes",
+      "preview_pic": "",
+      "category": 3,
+      "price": 1700,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 15,
+    "fields": {
+      "product_name": "Alice Mutton",
+      "description": "20 - 1 kg tins",
+      "preview_pic": "",
+      "category": 6,
+      "price": 3900,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 16,
+    "fields": {
+      "product_name": "Carnarvon Tigers",
+      "description": "16 kg pkg.",
+      "preview_pic": "",
+      "category": 8,
+      "price": 6300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 17,
+    "fields": {
+      "product_name": "Teatime Chocolate Biscuits",
+      "description": "10 boxes x 12 pieces",
+      "preview_pic": "",
+      "category": 3,
+      "price": 3200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 18,
+    "fields": {
+      "product_name": "Sir Rodneys Marmalade",
+      "description": "30 gift boxes",
+      "preview_pic": "",
+      "category": 3,
+      "price": 8100,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 19,
+    "fields": {
+      "product_name": "Sir Rodneys Scones",
+      "description": "24 pkgs.x 4 pieces",
+      "preview_pic": "",
+      "category": 3,
+      "price": 1000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 20,
+    "fields": {
+      "product_name": "Gustaf",
+      "description": "24 - 500 g pkgs.",
+      "preview_pic": "",
+      "category": 5,
+      "price": 2100,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 21,
+    "fields": {
+      "product_name": "Tunnb",
+      "description": "12 - 250 g pkgs.",
+      "preview_pic": "",
+      "category": 5,
+      "price": 900,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 22,
+    "fields": {
+      "product_name": "Mascarpone Fabioli",
+      "description": "24 - 200 g pkgs.",
+      "preview_pic": "",
+      "category": 4,
+      "price": 3200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 23,
+    "fields": {
+      "product_name": "Sasquatch Ale",
+      "description": "24 - 12 oz bottles",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1400,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 24,
+    "fields": {
+      "product_name": "Steeleye Stout",
+      "description": "24 - 12 oz bottles",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1800,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 25,
+    "fields": {
+      "product_name": "Inlagd Sill",
+      "description": "24 - 250 g  jars",
+      "preview_pic": "",
+      "category": 8,
+      "price": 1900,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 26,
+    "fields": {
+      "product_name": "Gravad lax",
+      "description": "12 - 500 g pkgs.",
+      "preview_pic": "",
+      "category": 8,
+      "price": 2600,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 27,
+    "fields": {
+      "product_name": "Chartreuse verte",
+      "description": "750 cc per bottle",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1800,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 28,
+    "fields": {
+      "product_name": "Boston Crab Meat",
+      "description": "24 - 4 oz tins",
+      "preview_pic": "",
+      "category": 8,
+      "price": 4500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 29,
+    "fields": {
+      "product_name": "Jacks New England Clam Chowder",
+      "description": "12 - 12 oz cans",
+      "preview_pic": "",
+      "category": 8,
+      "price": 2300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 30,
+    "fields": {
+      "product_name": "Singaporean Hokkien Fried Mee",
+      "description": "32 - 1 kg pkgs.",
+      "preview_pic": "",
+      "category": 5,
+      "price": 1400,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 31,
+    "fields": {
+      "product_name": "Ipoh Coffee",
+      "description": "16 - 500 g tins",
+      "preview_pic": "",
+      "category": 1,
+      "price": 4600,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 32,
+    "fields": {
+      "product_name": "Gula Malacca",
+      "description": "20 - 2 kg bags",
+      "preview_pic": "",
+      "category": 2,
+      "price": 2000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 33,
+    "fields": {
+      "product_name": "Rogede sild",
+      "description": "1k pkg.",
+      "preview_pic": "",
+      "category": 8,
+      "price": 4500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 34,
+    "fields": {
+      "product_name": "Spegesild",
+      "description": "4 - 450 g glasses",
+      "preview_pic": "",
+      "category": 8,
+      "price": 1200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 35,
+    "fields": {
+      "product_name": "Zaanse koeken",
+      "description": "10 - 4 oz boxes",
+      "preview_pic": "",
+      "category": 3,
+      "price": 6900,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 37,
+    "fields": {
+      "product_name": "Maxilaku",
+      "description": "24 - 50 g pkgs.",
+      "preview_pic": "",
+      "category": 3,
+      "price": 2000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 38,
+    "fields": {
+      "product_name": "Valkoinen suklaa",
+      "description": "12 - 100 g bars",
+      "preview_pic": "",
+      "category": 3,
+      "price": 1600,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 39,
+    "fields": {
+      "product_name": "Manjimup Dried Apples",
+      "description": "50 - 300 g pkgs.",
+      "preview_pic": "",
+      "category": 7,
+      "price": 5300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 40,
+    "fields": {
+      "product_name": "Filo Mix",
+      "description": "16 - 2 kg boxes",
+      "preview_pic": "",
+      "category": 5,
+      "price": 700,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 41,
+    "fields": {
+      "product_name": "Perth Pasties",
+      "description": "48 pieces",
+      "preview_pic": "",
+      "category": 6,
+      "price": 3300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 42,
+    "fields": {
+      "product_name": "Tourtiere",
+      "description": "16 pies",
+      "preview_pic": "",
+      "category": 6,
+      "price": 2200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 43,
+    "fields": {
+      "product_name": "Pate chinois",
+      "description": "24 boxes x 2 pies",
+      "preview_pic": "",
+      "category": 6,
+      "price": 2400,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 44,
+    "fields": {
+      "product_name": "Gnocchi di nonna Alice",
+      "description": "Some information about this item...",
+      "preview_pic": "",
+      "category": 5,
+      "price": 38000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-26T21:49:09.796Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 45,
+    "fields": {
+      "product_name": "Ravioli Angelo",
+      "description": "24 - 250 g pkgs.",
+      "preview_pic": "",
+      "category": 5,
+      "price": 1100,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 46,
+    "fields": {
+      "product_name": "Escargots de Bourgogne",
+      "description": "24 pieces",
+      "preview_pic": "",
+      "category": 8,
+      "price": 13000,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 47,
+    "fields": {
+      "product_name": "Raclette Courdavault",
+      "description": "5 kg pkg.",
+      "preview_pic": "",
+      "category": 4,
+      "price": 5500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 48,
+    "fields": {
+      "product_name": "Camembert Pierrot",
+      "description": "15 - 300 g rounds",
+      "preview_pic": "",
+      "category": 4,
+      "price": 3400,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 49,
+    "fields": {
+      "product_name": "Sirop derable",
+      "description": "24 - 500 ml bottles",
+      "preview_pic": "",
+      "category": 2,
+      "price": 4500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 50,
+    "fields": {
+      "product_name": "Tarte au sucre",
+      "description": "48 pies",
+      "preview_pic": "",
+      "category": 3,
+      "price": 300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 51,
+    "fields": {
+      "product_name": "Vegie-spread",
+      "description": "15 - 625 g jars",
+      "preview_pic": "",
+      "category": 2,
+      "price": 700,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 52,
+    "fields": {
+      "product_name": "Wimmers gute Semmelknodel",
+      "description": "20 bags x 4 pieces",
+      "preview_pic": "",
+      "category": 5,
+      "price": 900,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 53,
+    "fields": {
+      "product_name": "Louisiana Fiery Hot Pepper Sauce",
+      "description": "32 - 8 oz bottles",
+      "preview_pic": "",
+      "category": 2,
+      "price": 1200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 54,
+    "fields": {
+      "product_name": "Louisiana Hot Spiced Okra",
+      "description": "24 - 8 oz jars",
+      "preview_pic": "",
+      "category": 2,
+      "price": 1700,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 55,
+    "fields": {
+      "product_name": "Laughing Lumberjack Lager",
+      "description": "24 - 12 oz bottles",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1400,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 56,
+    "fields": {
+      "product_name": "Scottish Longbreads",
+      "description": "10 boxes x 8 pieces",
+      "preview_pic": "",
+      "category": 3,
+      "price": 200,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 57,
+    "fields": {
+      "product_name": "Gudbrandsdalsost",
+      "description": "10 kg pkg.",
+      "preview_pic": "",
+      "category": 4,
+      "price": 3600,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 58,
+    "fields": {
+      "product_name": "Outback Lager",
+      "description": "24 - 355 ml bottles",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 59,
+    "fields": {
+      "product_name": "Flotemysost",
+      "description": "10 - 500 g pkgs.",
+      "preview_pic": "",
+      "category": 4,
+      "price": 2300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 60,
+    "fields": {
+      "product_name": "Mozzarella di Giovanni",
+      "description": "Delicious cheese for you and your family",
+      "preview_pic": "project_pictures/┴хч_эрчтрэш _1.jpg",
+      "category": 4,
+      "price": 650,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-26T21:56:35.162Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 61,
+    "fields": {
+      "product_name": "Rod Kaviar",
+      "description": "24 - 150 g jars",
+      "preview_pic": "",
+      "category": 8,
+      "price": 1500,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 62,
+    "fields": {
+      "product_name": "Longlife Tofu",
+      "description": "5 kg pkg.",
+      "preview_pic": "",
+      "category": 7,
+      "price": 1001,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-09-04T19:33:57.502Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 63,
+    "fields": {
+      "product_name": "Rhonbrau Klosterbier",
+      "description": "24 - 0.5 l bottles",
+      "preview_pic": "",
+      "category": 1,
+      "price": 3400,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 64,
+    "fields": {
+      "product_name": "Lakkalikoori",
+      "description": "500 ml",
+      "preview_pic": "",
+      "category": 1,
+      "price": 1800,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 65,
+    "fields": {
+      "product_name": "Original Frankfurter",
+      "description": "12 boxes",
+      "preview_pic": "",
+      "category": 2,
+      "price": 1300,
+      "creation_date": "2023-08-17T20:08:04.187Z",
+      "modified_date": "2023-08-17T20:08:04.187Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 66,
+    "fields": {
+      "product_name": "Blue Milk",
+      "description": "A valuable food product containing more than 100 nutrients, including proteins, fat, milk sugar, minerals, phospholipids, organic acids, vitamins, enzymes.",
+      "preview_pic": "project_pictures/5p2778h7jawwkgg8k80sk0sgcgcowg.jpg",
+      "category": 1,
+      "price": 500,
+      "creation_date": "2023-08-26T20:56:07.436Z",
+      "modified_date": "2023-08-26T20:56:07.436Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 67,
+    "fields": {
+      "product_name": "NewItem1",
+      "description": "TEST_TEST_TEST",
+      "preview_pic": "",
+      "category": 3,
+      "price": 5,
+      "creation_date": "2023-09-04T19:29:45.996Z",
+      "modified_date": "2023-09-04T19:32:41.515Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 70,
+    "fields": {
+      "product_name": "Blue Milk",
+      "description": "Test",
+      "preview_pic": "",
+      "category": 4,
+      "price": 500,
+      "creation_date": "2023-09-04T20:33:38.217Z",
+      "modified_date": "2023-09-04T20:33:38.217Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Beverages",
+      "description": "Soft drinks, coffees, teas, beers, and ales"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Condiments",
+      "description": "Sweet and savory sauces, relishes, spreads, and seasonings"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Confections",
+      "description": "Desserts, candies, and sweet breads"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Dairy Products",
+      "description": "Cheeses"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "name": "Grains/Cereals",
+      "description": "Breads, crackers, pasta, and cereal"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 6,
+    "fields": {
+      "name": "Meat/Poultry",
+      "description": "Prepared meats"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 7,
+    "fields": {
+      "name": "Produce",
+      "description": "Dried fruit and bean curd"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 8,
+    "fields": {
+      "name": "Seafood",
+      "description": "Seaweed and fish"
+    }
+  }
+]
