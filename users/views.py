@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.views import LoginView as BaseLoginView
@@ -9,8 +10,8 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy, reverse
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes, force_str
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.views import View
 from django.views.generic import CreateView, UpdateView, TemplateView
 
@@ -35,7 +36,7 @@ class LogoutView(BaseLogoutView):
 class RegisterView(CreateView):
     model = User
     form_class = UserForm
-    success_url = reverse_lazy('users:login')
+    success_url = reverse_lazy('users:sign_up_message')
     template_name = 'users/register.html'
 
     def form_valid(self, form):
@@ -89,27 +90,35 @@ def generate_new_password(request):
     return redirect(reverse('users:login'))
 
 class EmailActivateView(View):
-    def get(self, uidb64, token):
-        user = self.get_user(uidb64)
-        if user is not None and default_token_generator.check_token(user, token):
+    def get(self, request, uidb64, token):
+        """Метод активации аккаунта через email"""
+        user = self.get_user(uidb64, token)
+        if user is not None:
             user.is_active = True
             user.save()
             return redirect(reverse('users:success_verification'))
         else:
-            return redirect(reverse('users:failed_verification'))
+            return redirect(reverse('users:verification_failed'))
 
 
     @staticmethod
-    def get_user(uidb64):
+    def get_user(uidb64, token):
         try:
-            uid = urlsafe_base64_encode(uidb64).decode()
-            user = User.objects.get(pk=uid)
+            uid = force_str(urlsafe_base64_decode(uidb64))
+            user = get_user_model().objects.get(pk=uid)
         except (TypeError, ValueError, OverflowError, ValidationError):
             user = None
         return user
 
+
 class SuccessVerifView(TemplateView):
     template_name = 'users/success_verification.html'
 
+
 class FailedVerifView(TemplateView):
     template_name = 'users/failed_verification.html'
+
+
+class SignUpMessageView(TemplateView):
+    template_name = 'users/sign_up_message.html'
+
