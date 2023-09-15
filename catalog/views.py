@@ -1,9 +1,12 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms import inlineformset_factory
+from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 from catalog.models import Product, Category, Version
 from catalog.forms import ProductForm, VersionForm
+from catalog.services import get_categories_cache
 
 
 class ProductListView(ListView):
@@ -28,7 +31,7 @@ def contacts(request):
     return render(request, 'catalog/contacts.html', content)
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:product_list')
@@ -40,10 +43,18 @@ class ProductCreateView(CreateView):
         return super().form_valid(form)
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
 
     model = Product
     form_class = ProductForm
+
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.object.creator == self.request.user or self.request.user.is_superuser:
+            return self.object
+        else:
+            raise Http404
+
 
     def get_success_url(self):
         return reverse('catalog:product_edit', args=[self.kwargs.get('pk')])
@@ -73,7 +84,30 @@ class ProductUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:product_list')
 
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.object.creator == self.request.user or self.request.user.is_superuser:
+            return self.object
+        else:
+            raise Http404
+
+
+def categories(request):
+    content = {
+        'category_list': get_categories_cache(),
+    }
+    return render(request, 'catalog/categories.html', content)
+
+
+def filtered_items(request, pk):
+    category_item = Category.objects.get(pk=pk)
+    content = {
+        'object_list': Product.objects.filter(category_id=pk),
+        'title': f'{category_item.name}',
+        'description': f'{category_item.description}'
+    }
+    return render(request, 'catalog/filtered_items.html', content)

@@ -1,12 +1,11 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.hashers import make_password
-from django.contrib.auth.tokens import default_token_generator
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView as BaseLoginView
 from django.contrib.auth.views import LogoutView as BaseLogoutView
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
-from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy, reverse
@@ -64,7 +63,7 @@ class RegisterView(CreateView):
         return super().form_valid(form)
 
 
-class ProfileView(UpdateView):
+class ProfileView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = UserProfileForm
     success_url = reverse_lazy('users:profile')
@@ -73,7 +72,7 @@ class ProfileView(UpdateView):
     def get_object(self, queryset=None):
         return self.request.user
 
-
+@login_required
 def generate_new_password(request):
     alphabet = string.ascii_letters + string.digits + string.punctuation
     new_password = ''.join(secrets.choice(alphabet) for i in range(12))
