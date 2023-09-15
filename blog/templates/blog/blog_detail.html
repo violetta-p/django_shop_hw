@@ -23,12 +23,12 @@
                     <div class="btn-group">
                         <a href="{% url 'blog:list'%}"
                            class="btn btn-sm btn-outline-secondary">Back</a>
-                        {% if user.is_authenticated %}
+
                         <a href="{% url 'blog:edit' object.pk %}"
                            class="btn btn-sm btn-outline-secondary">Update</a>
                         <a href="{% url 'blog:delete' object.pk %}"
                            class="btn btn-sm btn-outline-secondary">Delete</a>
-                        {% endif %}
+
                     </div>
                 </div>
                 </div>
